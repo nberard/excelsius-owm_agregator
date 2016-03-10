@@ -1,0 +1,11 @@
+elastic_search:
+    port: 9200
+    host: "elasticsearch"
+cities:
+  - {name: "Paris 20 Ménilmontant", id: 2994540 }
+  - {name: "Boisseron", id: 3031949 }
+  - {name: "Taipei", id: 1668341 }
+  - {name: "Sète", id: 6432661 }
+  - {name: "Nantes", id: 2990969 }
+open_weather_map:
+    token: "101f79b79f822b47d18d196e900a0601"
