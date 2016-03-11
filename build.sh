@@ -1,3 +1,7 @@
 #!/bin/bash
-ARM_ARCH=${1:-}
-docker build --rm -f Dockerfile${ARM_ARCH} -t excelsius/owm_agregator${ARM_ARCH}:latest .
+if [ $(uname -m | grep arm) ]; then
+    ARCH_PARAM="-arm"
+else
+    ARCH_PARAM=""
+fi
+docker build --rm -f Dockerfile${ARCH_PARAM} -t excelsius/owm_agregator${ARCH_PARAM}:latest .
